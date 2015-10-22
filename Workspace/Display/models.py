@@ -1,0 +1,71 @@
+from django.db import models
+from django_extensions.db.fields import UUIDField
+# Create your models here.
+
+class landingPageMaster(models.Model):
+    uniqueid = UUIDField()
+    templatename = models.CharField(max_length=255, null=True, blank=True)
+    
+class landingPageData(models.Model):
+    m_landingpage = models.ForeignKey(landingPageMaster)
+    companyname_html = models.TextField(null=True, blank=True)
+    tagline_html = models.TextField(null=True, blank=True)
+    coverphotoinfo_html = models.TextField(null=True, blank=True)
+    servicesheading_html = models.TextField(null=True, blank=True)
+    servicesinfo_html = models.TextField(null=True, blank=True)
+    service1img_html = models.TextField(null=True, blank=True)
+    service1info_html = models.TextField(null=True, blank=True)
+    service2info_html = models.TextField(null=True, blank=True)
+    service2img_html = models.TextField(null=True, blank=True)
+    galleryheading_html = models.TextField(null=True, blank=True)
+    galleryimg1_html = models.TextField(null=True, blank=True)
+    galleryimg2_html = models.TextField(null=True, blank=True)
+    galleryimg3_html = models.TextField(null=True, blank=True)
+    galleryimg4_html = models.TextField(null=True, blank=True)
+    galleryimg5_html = models.TextField(null=True, blank=True)
+    galleryimg6_html = models.TextField(null=True, blank=True)
+    feature1heading_html = models.TextField(null=True, blank=True)
+    feature1info_html = models.TextField(null=True, blank=True)
+    feature2heading_html = models.TextField(null=True, blank=True)
+    feature2info_html = models.TextField(null=True, blank=True)
+    feature3heading_html = models.TextField(null=True, blank=True)
+    feature3info_html = models.TextField(null=True, blank=True)
+    aboutusinfo_html = models.TextField(null=True, blank=True)
+    getinformedheading_html = models.TextField(null=True, blank=True)
+    getinformedinfo_html = models.TextField(null=True, blank=True)
+    copyrightinfo_html = models.TextField(null=True, blank=True)
+    coverphotoimg_html = models.TextField(null=True, blank=True)
+    
+'''class editorData(models.Model):
+    
+    companyname = models.CharField()
+    tagline = models.CharField()
+    coverphotoinfo = models.CharField()
+    servicesheading = models.CharField()
+    servicesinfo = models.CharField()
+    service1img = models.CharField()
+    service1info = models.CharField()
+    service2info = models.CharField()
+    service2img = models.CharField()
+    galleryheading = models.CharField()
+    galleryimg1 = models.CharField()
+    galleryimg2 = models.CharField()
+    galleryimg3 = models.CharField()
+    galleryimg4 = models.CharField()
+    galleryimg5 = models.CharField()
+    galleryimg6 = models.CharField()
+    feature1heading = models.CharField()
+    feature1info = models.CharField()
+    feature2heading = models.CharField()
+    feature2info = models.CharField()
+    feature3heading = models.CharField()
+    feature3info = models.CharField()
+    aboutusinfo = models.CharField()
+    getinformedheading = models.CharField()
+    getinformedinfo = models.CharField()
+    copyrightinfo = models.CharField()
+    coverphotoimg = models.CharField()
+    
+    def __str__(self):
+            return ' '.join([self.firstName, self.lastName])    
+'''
